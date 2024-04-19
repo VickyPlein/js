@@ -1,4 +1,4 @@
-import { Registration } from "./registration";
+import { Registration } from "./registration.js";
 
 const markInput=<HTMLInputElement>document.getElementById("mark");
 const modelInput=<HTMLInputElement>document.getElementById("model");
@@ -28,7 +28,7 @@ addRegistrationButton.onclick=()=>{
         regNumber:regNumberInput.value,
         phone:phoneInput.value,
     }
-    fetch("https://registracija-fa201-default-rtdb.europe-west1.firebasedatabase.app/registrations.json",{
+    fetch("https://registracija-82697-default-rtdb.europe-west1.firebasedatabase.app/registrations.json",{
         method:"POST",
         headers:{
             'Accept':'application/json',
@@ -95,7 +95,7 @@ const showData=()=>{
                     regNumber:(<HTMLInputElement>document.getElementById("regNumberEdit")).value,
                     phone:(<HTMLInputElement>document.getElementById("phoneEdit")).value,
                 }
-                fetch(`https://registracija-fa201-default-rtdb.europe-west1.firebasedatabase.app/registrations/${reg.id}.json`,{
+                fetch(`https://registracija-82697-default-rtdb.europe-west1.firebasedatabase.app/registrations/${reg.id}.json`,{
                     method:"PUT",
                     headers:{
                         'Accept':'application/json',
@@ -122,7 +122,7 @@ const showData=()=>{
 }
 
 const loadData=()=>{
-    fetch("https://registracija-fa201-default-rtdb.europe-west1.firebasedatabase.app/registrations.json",{
+    fetch("https://registracija-82697-default-rtdb.europe-west1.firebasedatabase.app/registrations.json",{
         method:"GET",
         headers:{
             'Accept':'application/json',
